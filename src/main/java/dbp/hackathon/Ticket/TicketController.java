@@ -33,10 +33,9 @@ public class TicketController {
     }
 
     @PatchMapping("/{id}/changeState")
-    public ResponseEntity<?> changeTicketState(@PathVariable Long id) {
+    public ResponseEntity<Ticket> changeTicketState(@PathVariable Long id) {
         try {
-            ticketService.changeState(id);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(ticketService.changeState(id));
         } catch (IllegalStateException e) {
             return ResponseEntity.notFound().build();
         }

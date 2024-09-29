@@ -1,7 +1,6 @@
 package dbp.hackathon.Funcion;
 
 import dbp.hackathon.Ticket.TicketRepository;
-import dbp.hackathon.Ticket.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
